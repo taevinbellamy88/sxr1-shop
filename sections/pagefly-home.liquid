@@ -1,0 +1,554 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Portfolio</title>
+  </head>
+  <body style="background-color: #fff;" padding-bottom: 0px;}>
+    <style>
+                  #main_menu a.menu_item{
+                    color:{{ section.settings.msg_dsktp_clr }};
+                  }
+                  #main_menu a.menu_item span{
+                    font-size:{{ section.settings.welcome_msg_font_size }}px;
+                  }
+        img.welcome_logo{
+              width:{{ section.settings.desktop_logo_size }}px;
+      margin-top: 200px;
+            }
+                   @media (max-width: 767px) {
+        	        #main_menu a.menu_item{
+                    color:{{ section.settings.msg_mob_clr }};
+                  }
+                     #main_menu a.menu_item span{
+                    font-size:{{ section.settings.welcome_mob_font_size }}px;
+                  }
+                    img.welcome_logo{
+              width:{{ section.settings.mobile_logo_size }}px;
+            }
+                   }
+                    @media (max-width: 767px) {
+                        .desktopview {
+                            display: none;
+                        }
+                    }
+    </style>
+
+    <style>
+      @media (min-width: 767px) {
+        .newtv-border {
+          left: -142px;
+        }
+      @media (min-width: 767px) {
+        .mobileview {
+          display: none;
+
+        }
+      }
+    </style>
+    <header>
+      <div id="shopify-section-video-background" class="shopify-section videoBackground">
+        <div class="videoBox"></div>
+
+        <div class="fullscreen-video-wrap">
+          <video
+            class="video-js"
+            loop="loop"
+            muted
+            defaultMuted
+            playsinline
+            oncontextmenu="return false;"
+            autoplay
+            preload="auto"
+            id="myVideo"
+          >
+            {% if section.settings.home_bg_video != blank %}
+              <source src="{{ section.settings.home_bg_video }}" type="video/mp4">
+            {% else %}
+              <source src="" type="video/mp4">
+            {% endif %}
+          </video>
+
+          <style>
+             .container {
+              height: 60vh;
+              position: relative;
+            }
+             @font-face {
+            font-family: "Courier Bold";
+            src: url("https://cdn.shopify.com/s/files/1/0676/6274/1791/files/Courier_Bold.woff2?v=1668069916") format("woff2"),
+            url("https://cdn.shopify.com/s/files/1/0676/6274/1791/files/Courier_Bold.woff2?v=1668069916") format("woff2");
+            }
+            .text {
+              font-size: 32px;
+              color: #fff;
+              z-index: 99;
+              font-family: "Courier Bold";
+              font-weight: bold;
+              text-align: center;
+              animation: glow 1s ease-in-out infinite alternate;
+            }
+
+            @-webkit-keyframes glow {
+              from {
+                text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 20px #fff, 0 0 40px #000, 0 0 50px #000, 0 0 20px #000, 0 0 20px #000;
+              }
+
+              to {
+                text-shadow: 0 0 20px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 20px #fff, 0 0 60px #fff, 0 0 20px #fff, 0 0 20px #fff;
+
+
+            }
+          </style>
+          <body>
+            <div class="container">
+              <div class="center">
+                <div align="center">
+                  <div id="divpic">
+                    <script>
+                      window.__pagefly_global_settings__ = {
+                          fontFamilies: ["Playfair Display", "Lato", "Source Sans Pro"],
+                          selectedFonts: { "Playfair Display": { "400": 0 }, Lato: { "400": 0 }, "Source Sans Pro": { "400": 0 } },
+                      };
+                    </script>
+                    <link
+                      href="//cdn.shopify.com/s/files/1/0648/6297/8273/t/7/assets/pagefly-main.css?v=162325400321363069901660696646"
+                      rel="stylesheet"
+                      type="text/css"
+                      media="all"
+                    >
+                    <style>
+                      .bQZDKw {
+                          padding: 0px 0;
+                      }
+                      #enter {
+                          -webkit-animation: fadeIn 2s ease-in;
+                          animation: fadeIn 2s ease-in;
+                      }
+                      @-webkit-keyframes fadeIn {
+                          from {
+                              opacity: 0;
+                          }
+                          to {
+                              opacity: 1;
+                          }
+                      }
+                      @keyframes fadeIn {
+                          from {
+                              opacity: 0;
+                          }
+                          to {
+                              opacity: 1;
+                          }
+                      }
+                    </style>
+                    <style></style>
+                    <div style="opacity: 0;" class="sc-faUpoM cFOwMS __pf __pf_LIhrnuE6" id="__pf">
+                      <div data-pf-type="Body" class="sc-ksHpcM hkPZIR pf-1_">
+                        <div data-pf-type="Layout" class="sc-cVAmsi cFAsxI pf-2_">
+                          <div data-section-id="pf-88fd" data-pf-type="Section" class="sc-igXgud lhtyiH pf-3_">
+                            <div style="--cw: 2000px;" class="sc-cjrPHo eOcrMz">
+                              <div class="sc-clIzBv iQyrr pf-4_ pf-r pf-r-eh" style="--s-xs: 15px;" data-pf-type="Row">
+                                <div class="pf-c" style="--c-xs: 12; --c-md: 12; --c-lg: 12;">
+                                  <div data-pf-type="Column" class="sc-gXRojI kCnmwO pf-5_">
+                                    {% if section.settings.home_bg_img != blank %}
+                                      <img
+                                        0
+                                        class="welcome_logo"
+                                        src="{{ section.settings.home_bg_img | img_url:''}}"
+                                        width="350"
+                                        height="auto"
+                                        sizes="(min-width: 1536px) 1536px, (min-width: 1024px) 1280px, (min-width: 640px) 768px, 320px"
+                                        loading="lazy"
+                                      >
+
+                                    {% else %}
+                                      <img
+                                        src="https://cdn.shopify.com/s/files/1/0655/0211/8122/files/ezgif.com-gif-maker_51.gif?v=1661457184"
+                                        srcset="https://cdn.shopify.com/s/files/1/0655/0211/8122/files/ezgif.com-gif-maker_51.gif?v=1661457184"
+                                        width="350"
+                                        height="auto"
+                                        sizes="(min-width: 1536px) 1536px, (min-width: 1024px) 1280px, (min-width: 640px) 768px, 320px"
+                                        loading="lazy"
+                                      >
+                                    {% endif %}
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                id="main_menu"
+                                class="sc-clIzBv iQyrr pf-7_ pf-r pf-r-eh"
+                                style="--s-xs: 15px; --s-lg: 0px; margin-top: -40px; margin-bottom: 150px;"
+                                data-pf-type="Row"
+                                id="enter"
+                              >
+                                {% if section.settings.home_nav != blank %}
+                                  {% assign home_list = section.settings.home_nav %}
+                                  {% for link in linklists[home_list].links %}
+                                    <div class="pf-c" style="--c-xs: 12; --c-md: 12; --c-lg: 12;">
+                                      <div data-pf-type="Column" class="sc-gXRojI kCnmwO pf-8_">
+                                        <a
+                                          href="{{ link.url }}"
+                                          target="_self"
+                                          data-pf-type="Button"
+                                          class="sc-djWRfJ dtXvbo pf-9_ menu_item"
+                                        >
+                                          <span data-pf-type="Text" class="sc-BHvUt fJlZte pf-11_">
+                                            {{- link.title -}}
+                                          </span>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  {% endfor %}
+                                {% else %}
+                                  <div class="pf-c" style="--c-xs: 12; --c-md: 12; --c-lg: 12;">
+                                    <div data-pf-type="Column" class="sc-gXRojI kCnmwO pf-8_">
+                                      <a
+                                        href="/collections/all"
+                                        target="_self"
+                                        data-pf-type="Button"
+                                        class="sc-djWRfJ dtXvbo pf-9_"
+                                      >
+                                        <span data-pf-type="Text" class="sc-BHvUt fJlZte pf-11_">Shop</span>
+                                      </a>
+                                    </div>
+                                  </div>
+
+                                  <div class="pf-c" style="--c-xs: 12; --c-md: 12; --c-lg: 12;">
+                                    <div data-pf-type="Column" class="sc-gXRojI kCnmwO pf-12_">
+                                      <a
+                                        href="/pages/contact"
+                                        target="_self"
+                                        data-pf-type="Button"
+                                        class="sc-djWRfJ dtXvbo pf-13_"
+                                      >
+                                        <span data-pf-type="Text" class="sc-BHvUt fJlZte pf-15_">Contact Us</span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div class="pf-c" style="--c-xs: 12; --c-md: 12; --c-lg: 12;">
+                                    <div data-pf-type="Column" class="sc-gXRojI kCnmwO pf-16_">
+                                      <a
+                                        href="/pages/faq"
+                                        target="_self"
+                                        data-pf-type="Button"
+                                        class="sc-djWRfJ dtXvbo pf-17_"
+                                      >
+                                        <span data-pf-type="Text" class="sc-BHvUt fJlZte pf-19_"> About </span>
+                                      </a>
+                                    </div>
+                                  </div>
+                                {% endif %}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <script>
+                      !(function () {
+                          window.__pagefly_setting__ && (window.__pagefly_setting2__ = window.__pagefly_setting__),
+                              (window.__pagefly_setting__ = {
+                                  baseURL: "https://apps.pagefly.io",
+                                  analyticsURL: "https://analytics.pagefly.io",
+                                  isBackend: false,
+                                  cdnURL: "https://cdn.pagefly.io",
+                                  pageflyVersion: "3.22.0",
+                                  shopDomain: "contactoverhendrix-e518.myshopify.com",
+                                  elementData: {},
+                                  pageTitle: "home",
+                                  pageType: "home",
+                                  pageId: "4634f5f4-c19d-4046-aae9-bea8420c359c",
+                                  lazyLoad: true,
+                                  forceByPassGoogleLightHouse: false,
+                                  imageLazyLoad: true,
+                                  nativeImageLazyLoad: true,
+                                  useThemeJQ: false,
+                                  selectedFonts: { "Courier Prime": { "400": 0 }, "Playfair Display": { "400": 0 }, Lato: { "400": 0 }, "Source Sans Pro": { "400": 0 } },
+                                  trackingIDs: [],
+                                  shopifyProxyPath: "/a/pf_preview",
+                              }),
+                              window.__pagefly_setting2__ &&
+                                  ((window.__pagefly_setting__ = (function _(d, b) {
+                                      let c = { ...(d || {}) };
+                                      for (let a of Object.keys(b)) b[a] instanceof Object && (Array.isArray(b[a]) && c[a] ? Object.assign(b[a], [...b[a], ...c[a]]) : Object.assign(b[a], _(c[a], b[a])));
+                                      return Object.assign(c || {}, b), c;
+                                  })(__pagefly_setting2__, __pagefly_setting__)),
+                                  delete window.__pagefly_setting2__),
+                              (window.__pagefly_setting__.moneyFormat = "£{{amount}}");
+                      })();
+                    </script>
+                    <script src="https://cdn.pagefly.io/pagefly/3.22.0/core/helper.js" async=""></script>
+                  </div>
+                </div>
+
+                <iframe
+                  id="dummy-chat-button-iframe"
+                  name="dummy-chat-button-iframe"
+                  src="about:blank"
+                  scrolling="no"
+                  style="position: fixed; bottom: 24px; border: none; z-index: 2147483647; overflow: hidden; right: 24px; height: 68px; width: 68px;"
+                ></iframe>
+
+                <style>
+                  .ctGkmz,.dtXvbo{display:inline-block}.ctGkmz,.kCnmwO,.lhtyiH{position:relative}.cFOwMS{--pf-sample-color:#5d6b82;--pf-border-color:#d1d5db;opacity:1!important}.dtXvbo{line-height:1;padding:12px 20px;text-align:center;-webkit-text-decoration:none;text-decoration:none;outline:0}.dtXvbo span{color:inherit; font-size: 25px; font-family: "Courier Bold";}.ctGkmz{max-width:100%}.ctGkmz img{width:100%;height:100%;border-radius:inherit}.kCnmwO:empty{display:initial}.lhtyiH{padding:20px 0}@media all{.__pf_LIhrnuE6 .pf-3_{height:auto;width:100%;background-size:cover;background-position:center center;background-image:url("");background-attachment:fixed}.__pf_LIhrnuE6 .pf-5_{display:flex;justify-content:center; margin-top: 50%;}.__pf_LIhrnuE6 .pf-6_{height:auto;width:181px}.__pf_LIhrnuE6 .pf-7_{margin-top:0px}.__pf_LIhrnuE6 .pf-12_,.__pf_LIhrnuE6 .pf-16_,.__pf_LIhrnuE6 .pf-8_{display:flex;justify-content:center;margin-top:5px;margin-bottom:5px}.__pf_LIhrnuE6 .pf-13_,.__pf_LIhrnuE6 .pf-17_,.__pf_LIhrnuE6 .pf-9_{font-family:"Neo-Syber-Regular"";font-weight:700;color:#000}.__pf_LIhrnuE6 .pf-6_>img{height:auto}.__pf_LIhrnuE6 .pf-13_:hover,.__pf_LIhrnuE6 .pf-17_:hover,.__pf_LIhrnuE6 .pf-9_:hover{text-decoration:underline}}@media (min-width:1025px) and (max-width:1199px){.__pf_LIhrnuE6 .pf-6_,.__pf_LIhrnuE6 .pf-6_>img{height:auto}}@media (min-width:768px) and (max-width:1024px){.__pf_LIhrnuE6 .pf-6_,.__pf_LIhrnuE6 .pf-6_>img{height:auto}}@media (max-width:767px){.__pf_LIhrnuE6 .pf-6_,.__pf_LIhrnuE6 .pf-6_>img{height:auto}}
+                </style>
+              </div>
+            </div>
+          </body>
+          <style>
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            .body {
+                margin: 50px;
+            }
+
+            #divpic {
+                height: relative;
+                width: 350px;
+                text-align: center;
+            }
+            /*Use this css*/
+
+            .main-content .videoBackground {
+                margin-top: -158px;
+            }
+            .videoBackground {
+                height: 100%;
+                position: relative;
+                z-index: 2;
+            }
+            .videoBackground .fullscreen-video-wrap {
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-width: 100%;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+            .videoBackground .fullscreen-video-wrap .video-js {
+                position: absolute;
+                top: 0;
+                left: 0;
+                min-height: 100%;
+                min-width: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .videoBackground .fullscreen-video-wrap video {
+                min-height: 100%;
+                min-width: 100%;
+                object-fit: cover;
+            }
+            .videoBackground .videoBox {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-direction: column;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100vh;
+                position: relative;
+            }
+            .videoBackground .imageBox {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-direction: column;
+                padding: 100px 20px 80px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+                height: 100vh;
+            }
+            .videoBackground .videoBoxInfo,
+            .videoBackground .imageBoxInfo {
+                z-index: 2;
+                text-align: center;
+            }
+            .videoBackground .overlay {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background: #000;
+                z-index: 1;
+            }
+            .videoBackground .videoBoxInfoBtn,
+            .videoBackground .imageBoxInfoBtn {
+                -moz-user-select: none;
+                -ms-user-select: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                display: inline-block;
+                width: auto;
+                text-decoration: none;
+                text-align: center;
+                vertical-align: middle;
+                cursor: pointer;
+                border: 1px solid transparent;
+                border-radius: 2px;
+                padding: 8px 15px;
+                font-style: normal;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 0.06em;
+                white-space: normal;
+                font-size: 14px;
+                margin-top: 20px;
+            }
+            .videoBackground .videoBoxInfoTitle,
+            .videoBackground .imageBoxInfoTitle {
+                color: #fff;
+                font-size: 30px;
+                line-height: 40px;
+            }
+            .videoBackground .videoBoxInfoDescription,
+            .videoBackground .imageBoxInfoDescription {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .videoBackground .videoBoxInfoDescription p,
+            .videoBackground .imageBoxInfoDescription p {
+                font-size: 18px;
+                line-height: 28px;
+            }
+            .videoBackground .placeholderNoblocks {
+                text-align: center;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            @media screen and (max-width: 767px) {
+                .main-content .videoBackground {
+                    margin-top: -158px;
+                }
+                .videoBackground .fullscreen-video-wrap {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    min-width: 100%;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    z-index: 7;
+                }
+                .videoBackground .videoBox {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    flex-direction: column;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    height: 100vh;
+                    position: relative;
+                }
+                .videoBackground .fullscreen-video-wrap {
+                    min-height: 100%;
+                    min-width: 100%;
+                    object-fit: cover;
+                }
+                .videoBackground .videoBoxInfo {
+                    padding: 40px 20px;
+                    background: #000;
+                    width: 100%;
+                }
+            }
+          </style>
+        </div>
+
+        {% schema %}
+                          {
+            "name": "Home",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "home_bg_video",
+                    "label": "Select Background Video"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "home_bg_img",
+                    "label": "Select Logo"
+                },
+              {
+          "type": "range",
+          "id": "desktop_logo_size",
+          "min": 100,
+          "max": 500,
+          "step": 10,
+          "unit": "px",
+          "label": "Desktop Logo Width",
+          "default": 100
+        },
+              {
+          "type": "range",
+          "id": "mobile_logo_size",
+          "min": 100,
+          "max": 500,
+          "step": 10,
+          "unit": "px",
+          "label": "Mobile Logo Width",
+          "default": 100
+        },
+
+
+
+                {
+                    "type": "link_list",
+                    "id": "home_nav",
+                    "label": "Select Navigation"
+                },
+                    {
+          "type": "range",
+          "id": "welcome_msg_font_size",
+          "min": 26,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Nav Dsktop Txt Size",
+          "default": 26
+        },
+                    {
+          "type": "range",
+          "id": "welcome_mob_font_size",
+          "min": 26,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Nav Mobile Txt Size",
+          "default": 26
+        },
+
+              {
+        "type":"color",
+        "id":"msg_dsktp_clr",
+        "label":"Nav Desktop Color"
+        },
+
+              {
+        "type":"color",
+        "id":"msg_mob_clr",
+        "label":"Nav Mob Color"
+        }
+            ]
+        }
+        {% endschema %}
+      </div>
+    </header>
+  </body>
+</html>

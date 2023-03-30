@@ -1,0 +1,77 @@
+{% if section.settings.preloader_check %}
+  <style>
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: {{section.settings.preloader_bg}};
+        z-index: 99;
+      }
+
+      #status {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background-image: url("{{ section.settings.preloader_img | img_url:'' }}");
+        background-repeat: no-repeat;
+        background-position: center;
+        margin: -100px 0 0 -100px;
+        background-size: 100%;
+      }
+       #preloader-comment {
+      position: absolute;
+      left: 50%;
+      top: calc(50% + 110px);
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: 16px;
+      color: white;
+    }
+  </style>
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+    <div id="preloader-comment">Keep Kickin'</div>
+  </div>
+{% endif %}
+{% schema %}
+{
+  "name": "Preloader",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "preloader_check",
+      "label": "Enable or Disable Preloader",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "preloader_img",
+      "label": "Select Logo For Preloader"
+    },
+    {
+      "type": "color",
+      "id": "preloader_bg",
+      "label": "Select Preloader Background"
+    }
+  ]
+}
+{% endschema %}
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"
+></script>
+
+{% javascript %}
+  $(window).on('load', function() {
+    // Make sure the whole site is loaded
+    $('#status').fadeOut(); // Fade out the loading animation
+    $('#preloader').delay(100).fadeOut(300); // Fade out the preloader DIV
+    $('#preloader-comment').delay(100).fadeOut(300); // Fade out the preloader DIV
+    $('body').delay(100).css({'overflow': 'visible'}); // Set body overflow to visible after preloader is hidden
+  });
+{% endjavascript %}
